@@ -1,17 +1,26 @@
 {
-    "name": "soarecostin/file-vault",
+    "name": "jellyhaus/file-vault",
     "description": "",
     "keywords": [
         "laravel", "encrypt", "decrypt", "encryption", "decryption",
         "cbc", "php", "file", "file-vault"
     ],
-    "homepage": "https://github.com/soarecostin/file-vault",
+    "homepage": "https://github.com/jellyhaus/file-vault",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
             "name": "Costin Soare",
-            "email": "soarecostin@gmail.com",
+            "role": "Original Developer",
+            "homepage": "https://github.com/soarecostin"
+        },
+        {
+            "name": "Sam Carré",
+            "role": "Previous Developer",
+            "homepage": "https://github.com/Sammyjo20"
+        },
+        {
+            "name": "Jason Millis",
             "role": "Developer"
         }
     ],
