@@ -17,15 +17,10 @@ This package requires PHP 8.4 and Laravel 12.
 You can install the package via composer:
 
 ```bash
-composer require jellyhaus/file-vault
+composer require company4-dev/file-vault
 ```
 
 ## Usage
-
-### Tutorials
-For a detailed description of how to encrypt files in Laravel using this package, please see the following articles:
-- [Part 1: How to encrypt large files in Laravel](https://medium.com/swlh/how-to-encrypt-large-files-in-laravel-293460836ded?source=friends_link&sk=976ab6e5d1cfb52e10c801fe0cb04fca)
-- [Part 2: How to encrypt & upload large files to Amazon S3 in Laravel](https://medium.com/@soarecostin/how-to-encrypt-upload-large-files-to-amazon-s3-in-laravel-af88324a9aa?sk=a9a358a3892e898a60448d5314fb3dc0)
 
 ### Description
 This package will automatically register a facade called `FileVault`. The `FileVault` facade is using the Laravel `Storage` and will allow you to specify a `disk`, just as you would normally do when working with Laravel Storage. All file names/paths that you will have to pass into the package encrypt/decrypt functions are relative to the disk root folder. By default, the `local` disk is used, but you can either specify a different disk each time you call one of `FileVault` methods, or you can set the default disk to something else, by publishing this package's config file.
