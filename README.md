@@ -1,11 +1,9 @@
 # File encryption / decryption in Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/soarecostin/file-vault.svg?style=flat-square)](https://packagist.org/packages/soarecostin/file-vault)
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/soarecostin/file-vault/master.svg?style=flat-square)](https://travis-ci.org/soarecostin/file-vault)
-[![Quality Score](https://img.shields.io/scrutinizer/g/soarecostin/file-vault.svg?style=flat-square)](https://scrutinizer-ci.com/g/soarecostin/file-vault)
-[![StyleCI](https://styleci.io/repos/221933072/shield)](https://styleci.io/repos/221933072)
-[![Total Downloads](https://img.shields.io/packagist/dt/soarecostin/file-vault.svg?style=flat-square)](https://packagist.org/packages/soarecostin/file-vault)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/company4-dev/file-vault.svg)](https://packagist.org/packages/company4-dev/file-vault)
+[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE.md)
+[![CI](https://github.com/company4-dev/file-vault/actions/workflows/ci.yml/badge.svg)](https://github.com/company4-dev/file-vault/actions/workflows/ci.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/company4-dev/file-vault.svg)](https://packagist.org/packages/company4-dev/file-vault)
 
 With this package, you can encrypt and decrypt files of any size in your Laravel project. This package uses streams and [CBC encryption](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Cipher_Block_Chaining_(CBC)), encrypting / decrypting a segment of data at a time.
 
