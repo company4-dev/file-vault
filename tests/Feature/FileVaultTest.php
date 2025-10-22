@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Storage;
-use Jellyhaus\FileVault\Facades\FileVault;
+use Company4\FileVault\Facades\FileVault;
 
 use function PHPUnit\Framework\assertFileDoesNotExist;
 

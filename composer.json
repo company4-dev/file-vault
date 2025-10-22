@@ -1,11 +1,11 @@
 {
-    "name": "jellyhaus/file-vault",
+    "name": "company4-dev/file-vault",
     "description": "",
     "keywords": [
         "laravel", "encrypt", "decrypt", "encryption", "decryption",
         "cbc", "php", "file", "file-vault"
     ],
-    "homepage": "https://github.com/jellyhaus/file-vault",
+    "homepage": "https://github.com/company4-dev/file-vault",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jellyhaus\\FileVault\\": "src"
+            "Company4\\FileVault\\": "src"
         }
     },
     "autoload-dev": {
@@ -55,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jellyhaus\\FileVault\\FileVaultServiceProvider"
+                "Company4\\FileVault\\FileVaultServiceProvider"
             ],
             "aliases": {
-                "FileVault": "Jellyhaus\\FileVault\\Facades\\FileVault"
+                "FileVault": "Company4\\FileVault\\Facades\\FileVault"
             }
         }
     }
