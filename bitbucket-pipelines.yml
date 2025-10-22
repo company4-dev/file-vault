@@ -1,0 +1,16 @@
+image: laravelsail/php84-composer:latest
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build
+          caches:
+            - composer
+          script:
+            # Install Composer dependencies
+            - COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --optimize-autoloader
+
+            # Run tests
+            - |
+              php -d memory_limit=-1 ./vendor/bin/pest --coverage --parallel --stop-on-failure
