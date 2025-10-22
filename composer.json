@@ -66,6 +66,5 @@
                 "FileVault": "Company4\\FileVault\\Facades\\FileVault"
             }
         }
-    },
-    "version": "1.1.0"
+    }
 }
