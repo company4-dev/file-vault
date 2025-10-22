@@ -3,8 +3,8 @@
 namespace Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use SoareCostin\FileVault\Facades\FileVault;
-use SoareCostin\FileVault\FileVaultServiceProvider;
+use Jellyhaus\FileVault\Facades\FileVault;
+use Jellyhaus\FileVault\FileVaultServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {
@@ -59,7 +59,7 @@ abstract class TestCase extends BaseTestCase
     protected function generateRandomKey()
     {
         return 'base64:'.base64_encode(
-            \SoareCostin\FileVault\FileVault::generateKey()
+            \Jellyhaus\FileVault\FileVault::generateKey()
         );
     }
 }

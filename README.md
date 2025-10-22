@@ -17,7 +17,7 @@ This package requires PHP 8.4 and Laravel 12.
 You can install the package via composer:
 
 ```bash
-composer require soarecostin/file-vault
+composer require jellyhaus/file-vault
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ This package will automatically register a facade called `FileVault`. The `FileV
 If you want to change the default `disk` or change the `key`/`cipher` used for encryption, you can publish the config file:
 
 ```
-php artisan vendor:publish --provider="SoareCostin\FileVault\FileVaultServiceProvider"
+php artisan vendor:publish --provider="Jellyhaus\FileVault\FileVaultServiceProvider"
 ```
 
 This is the contents of the published file:

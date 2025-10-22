@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SoareCostin\\FileVault\\": "src"
+            "Jellyhaus\\FileVault\\": "src"
         }
     },
     "autoload-dev": {
@@ -55,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "SoareCostin\\FileVault\\FileVaultServiceProvider"
+                "Jellyhaus\\FileVault\\FileVaultServiceProvider"
             ],
             "aliases": {
-                "FileVault": "SoareCostin\\FileVault\\Facades\\FileVault"
+                "FileVault": "Jellyhaus\\FileVault\\Facades\\FileVault"
             }
         }
     }
