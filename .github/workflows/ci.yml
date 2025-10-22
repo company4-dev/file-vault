@@ -23,6 +23,7 @@ jobs:
                   extensions: xdebug
                   coverage: xdebug
                   tools: composer:v2
+                  ini-values: xdebug.mode=coverage
               env:
                   # This is needed to install Xdebug on PHP 8.4+
                   XDEBUG_VERSION: 3.3.2
@@ -43,4 +44,4 @@ jobs:
               run: composer install --prefer-dist --no-progress
 
             - name: Run tests
-              run: XDEBUG_MODE=coverage php ./vendor/bin/pest --coverage --parallel --stop-on-failure
+              run: php ./vendor/bin/pest --coverage --parallel --stop-on-failure
