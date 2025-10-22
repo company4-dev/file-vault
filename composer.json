@@ -7,6 +7,11 @@
     ],
     "homepage": "https://github.com/company4-dev/file-vault",
     "license": "MIT",
+    "minimum-stability": "stable",
+    "support": {
+        "issues": "https://github.com/company4-dev/file-vault/issues",
+        "source": "https://github.com/company4-dev/file-vault"
+    },
     "type": "library",
     "authors": [
         {
@@ -61,5 +66,6 @@
                 "FileVault": "Company4\\FileVault\\Facades\\FileVault"
             }
         }
-    }
+    },
+    "version": "1.1.0"
 }
