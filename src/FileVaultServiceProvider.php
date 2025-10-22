@@ -1,6 +1,6 @@
 <?php
 
-namespace SoareCostin\FileVault;
+namespace Company4\FileVault;
 
 use Illuminate\Support\ServiceProvider;
 
