@@ -2,12 +2,12 @@ name: CI
 
 on:
     push:
-        branches: ["main"]
+        branches: [ "main" ]
     pull_request:
-        branches: ["main"]
+        branches: [ "main" ]
 
 permissions:
-    contents: read
+    contents: write
 
 jobs:
     build:
@@ -42,3 +42,50 @@ jobs:
 
             - name: Run tests
               run: php ./vendor/bin/pest --parallel --stop-on-failure
+
+    release:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Generate changelog
+              id: changelog
+              run: |
+                # Get the last tag
+                LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+
+                if [ -z "$LAST_TAG" ]; then
+                    # No previous tags, get all commits
+                    COMMITS=$(git log --pretty=format:"- %s" | head -20)
+                else
+                    # Get commits since last tag
+                    COMMITS=$(git log $LAST_TAG..HEAD --pretty=format:"- %s")
+                fi
+
+                # Store in output, handling multiline
+                echo "commits<<EOF" >> $GITHUB_OUTPUT
+                echo "$COMMITS" >> $GITHUB_OUTPUT
+                echo "EOF" >> $GITHUB_OUTPUT
+
+            - name: Bump version
+              id: version
+              run: |
+                LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "2.2.6")
+
+                # Split version and increment minor version
+                IFS='.' read -r major minor patch <<< "$LAST_TAG"
+                minor=$((minor + 1))
+                NEXT_VERSION="$major.$minor.0"
+
+                echo "Current version: $CURRENT_VERSION"
+                echo "Next version: $NEXT_VERSION"
+                echo "version=$NEXT_VERSION" >> $GITHUB_OUTPUT
+
+            - name: Create GitHub Release
+              uses: softprops/action-gh-release@v2
+              with:
+                body: ${{ steps.changelog.outputs.commits }}
+                draft: false
+                prerelease: false
+                tag_name: "${{ steps.version.outputs.version }}"
