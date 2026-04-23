@@ -43,12 +43,6 @@ jobs:
             - name: Run tests
               run: php ./vendor/bin/pest --parallel --stop-on-failure
 
-    release:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v4
-
             - name: Generate changelog
               id: changelog
               run: |
